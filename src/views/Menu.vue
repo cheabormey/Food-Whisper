@@ -1,29 +1,30 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <!-- Order -->
   <div class="flex">
     <div class="msx-w-[1640px] m-auto px-4 py-12 mt-0">
-      <h1 class="text-orange-600 font-bold text-4xl text-center">សាច់អាំង</h1>
+      <h1 class=" text-orange-400 font-bold text-4xl text-center">ចង់បានអីចុចលើButton</h1>
       <div class="grid grid-cols-2 lg:grid-cols-2 gap-12 pt-4">
         <div
           v-for="(card, index) in cards"
           :key="index"
-          class="border shadow-lg rounded-lg relative hover:scale-105 duration-300 hover:opacity-75"
+          class="border shadow-lg rounded-lg relative hover:scale-105 duration-300 "
         >
           <img
             class="w-full h-[200px] object-cover rounded-lg"
             :src="card.img"
             :alt="card.img"
           />
-          <div class="flex justify-between px-2 py-4 text-center">
+          <div class="flex justify-between p-5 text-center">
             <h2 class="font-bold sm:text-xl">{{ card.title }}</h2>
-            <h1 class="sm:text-xl text-red-500 font-semibold">$ {{ card.price }}</h1>
+            <h1 class="sm:text-xl text-amber-400 font-semibold">$ {{ card.price }}</h1>
           </div>
-          <button
-            @click="handleAddToCart(index)"
-            class="bg-orange-500 p-2 rounded-lg text-white"
-          >
+          <div class=" mx-28 my-5">
+
+            <button @click="handleAddToCart(index)" class="  bg-amber-500 py-3 px-7 rounded-lg  text-white hover:opacity-75 ">
             Add To Cart
           </button>
+          </div>
         </div>
       </div>
 
@@ -74,37 +75,23 @@
       <!-- selected items -->
       <!-- Overlay -->
     </div>
-    <!-- card R -->
+    
     <!-- right Card -->
-    <div class="w-[320px] h-[690px] bg-white border-solid border-2 border-grey-200">
+    <div class="w-[320px] h-full bg-white border-solid border-2 border-grey-200 ">
       <div class="flex space-x-44 m-3">
         <p class="text-xl font-medium text-gray-500 pl-3">Card</p>
         <p class="text-sm font-semibold text-gray-500 pt-2">
-          Order Today
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          
+ 
           <button class="text-lg text-indigo-600">
             {{ cart.length }}
           </button>
         </p>
       </div>
-      <div class="flex-none">
-        <!-- <div class="flex pl-4 pr-2 gap-1">
-          <div
-            class="py-2 px-4 bg-white text-center rounded-full border-solid border-2 border-gray-200 hover:bg-gray-400 hover:text-white"
-          >
-            Delivery
-          </div>
-          <div
-            class="py-2 px-4 bg-white text-center rounded-full border-solid border-2 border-gray-200 hover:bg-gray-400 hover:text-white"
-          >
-            Dine in
-          </div>
-          <div
-            class="py-2 px-4 bg-white text-center rounded-full border-solid border-2 border-gray-200 hover:bg-gray-400 hover:text-white"
-          >
-            Take away
-          </div>
-        </div> -->
-      </div>
+
 
       <!--  -->
       <div  v-if="cart.length > 0" class="w-[310px] bg-white h-[500px] m-1">
@@ -126,14 +113,14 @@
               <div>
                 <h1 class="text-black text-xl font-semibold">{{ cartitem.title }}</h1>
                 <h1
-                  class="text-orange-600 text-xl p-2 bg-orange-600 bg-opacity-50 rounded-md text-center"
+                  class=" text-xl w-14 bg-orange-300 rounded-md text-center text-black"
                 >
                   ${{ cartitem.price }}
                 </h1>
               </div>
               <button
                 @click="handleCancelCart(index)"
-                class="absolute bg-red-700 text-white w-6 h-6 rounded-md top-0 right-0"
+                class="absolute bg-red-500 text-white w-5 h-5 tex rounded-md top-0 right-0"
               >
                 x
               </button>
@@ -144,31 +131,24 @@
 
           </div>
         </div>
-        <!-- order -->
+        <!--  -->
         <div class="my-3 mx-3">
           <!-- <div class="flex space-x-[175px]">
             <p class="font-medium">$ {{ totalPrice }}</p>
           </div> -->
           
-          <!-- <div class="flex space-x-[145px] mb-[20px]">
-            <p class="text-gray-400">Discounts</p>
-            <p class="font-medium">-$ 3.00</p>
-          </div> -->
-          <div
-            class="flex space-x-[177px] pt-[30px] border-solid border-t-2 border-gray-200"
-          >
+          <div class="flex space-x-[177px] pt-[30px] border-solid border-t-2 border-gray-300">
             <p class="text-gray-400">Total</p>
-            <p class="font-medium text-orange-400">$ {{ totalPrice }}</p>
+            <p class="font-medium text-orange-700">$ {{ totalPrice }}</p>
           </div>
           <div class="mt-3">
-            <div
-              class="px-17 py-2 text-center bg-hoverOrange hover:bg-red-300 font-medium font-xs rounded-full"
-            >
-              <span>Place on order</span>
+            <div class="px-17 py-2 text-center bg-hoverOrange hover:bg-red-300 font-medium font-xs rounded-full">
+              <!-- <span>Place on order</span> -->
             </div>
           </div>
         </div>
       </div>
+      
       <div v-else  class="text-center">
         cart is empy
       </div>

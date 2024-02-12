@@ -4,10 +4,11 @@
       <div className="flex items-center ">
         <!-- logo -->
         <img
-          class="hidden lg:flex w-12 h-12 rounded-full"
-          src="https://i.pinimg.com/236x/9a/92/0e/9a920e8eab50323c36fc30b8c6224c13.jpg"
+          class="hidden lg:flex w-16 h-16 rounded-full border-2"
+          src="./img/Fodd_whisper-01.jpg"
           alt=""
         />
+        
 
         <!-- Left side -->
         <svg
@@ -26,9 +27,10 @@
           />
         </svg>
 
-        <h1 @click="closeMobileMenu" class="text-2xl sm:text-3xl lg:text-3xl px-6">
-          Best eats
-        </h1>
+<h1 @click="closeMobileMenu" class="text-2xl sm:text-3xl lg:text-2xl px-6 cursor-pointer transition-transform transform hover:scale-105">
+    <span class="font-bold text-orange-500">Food Whisper</span>
+</h1>
+
       </div>
 
       <!-- search input -->
