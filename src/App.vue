@@ -242,50 +242,58 @@
               <span class="text-white font-medium">Develop</span>
             </div>
           </li> -->
-
-          <div class=" flex relative px-4 cursor-pointer text-xl w-full h-12 hover:bg-[#FBC02D] rounded-xl">
+          <!-- Home -->
+          <router-link to="/Home">
+          <div class=" flex relative px-4 cursor-pointer text-xl w-full h-12 hover:bg-[#FBC02D] rounded-xl p-2">
             <div class="mr-4 my-auto">
-              <svg class="fill-current h-5 w-5" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>            </div>
+            <div class="flex-auto my-1">
+              <h1>Home</h1>  
+            </div>
+          </div>
+          </router-link>
+
+          <!-- menu -->
+          <router-link to="/Menu">
+          <div class="flex relative px-4 cursor-pointer text-xl w-full h-12 hover:bg-[#FBC02D] rounded-xl p-2">
+            <div class="mr-4 my-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+              </svg>
             </div>
             <div class="flex-auto my-1">
               <span>
-                <router-link to="/Cards">Cards</router-link>
-    
-                
+                Menu
               </span>
             </div>
           </div>
+          </router-link>
 
-          <div class="flex relative px-4 cursor-pointer text-xl w-full h-12 hover:bg-[#FBC02D] rounded-xl">
-            <div class="mr-4 my-auto">
-              <svg class="fill-current h-5 w-5" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 13H5c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM19 3H5c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
-            </div>
-            <div class="flex-auto my-1">
-              <span>
-                <router-link to="/Menu">Menu</router-link>
-              </span>
-            </div>
-          </div>
-
-          <div class="flex relative px-4 cursor-pointer text-xl w-full h-12 hover:bg-[#FBC02D] rounded-xl">
+          <router-link to="/About">
+          <div class="flex relative px-4 cursor-pointer text-xl w-full h-12 hover:bg-[#FBC02D] rounded-xl p-2">
             <div class="mr-4 my-auto">
               <svg class="fill-current h-5 w-5" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3H3C2 3 1 4 1 5v14c0 1.1.9 2 2 2h18c1 0 2-1 2-2V5c0-1-1-2-2-2zM5 17l3.5-4.5 2.5 3.01L14.5 11l4.5 6H5z"></path></svg>            </div>
             <div class="flex-auto my-1">
               <span>
-                <router-link to="/Order">Order</router-link>
+                About Us
               </span>
             </div>
           </div>
+          </router-link>
 
-          <div class="flex relative px-4 cursor-pointer text-xl w-full h-12 hover:bg-[#FBC02D] rounded-xl">
+          <router-link to="/Contact">
+          <div class="flex relative px-4 cursor-pointer text-xl w-full h-12 hover:bg-[#FBC02D] rounded-xl p-2 ">
             <div class="mr-4 my-auto">
               <svg class="fill-current h-5 w-5" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>            </div>
             <div class="flex-auto my-1">
               <span>
-                <router-link to="/Test"> Test</router-link>
+                 Contact
               </span>
             </div>
           </div>
+          </router-link>
 
 
         </ul>
