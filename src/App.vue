@@ -27,7 +27,7 @@
         </svg>
 
         <h1 @click="closeMobileMenu" class="text-2xl sm:text-3xl lg:text-3xl px-6">
-          Best eats
+          Food Whisper
         </h1>
       </div>
 
