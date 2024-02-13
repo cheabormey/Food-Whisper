@@ -1,5 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+ 
   <div class="max-w-[1640px]">
     <div class='max-w-[1640px] mx-auto p-4'>
         <div class='max-h-[500px] relative'>
@@ -17,8 +18,8 @@
             <div class='rounded-xl relative'>
                 <!-- Overlay -->
                 <div class='absolute w-full h-full bg-black/50 rounded-xl text-white'>
-                    <p class='font-bold text-2xl px-2 pt-4'>Sun's Out BOGO's Out  </p>
-                    <p class=' px-2 '>Through 8/26</p>
+                    <p class='font-bold text-2xl px-2 pt-4'>Best Food Ever </p>
+                    <p class=' px-2 '>Open 24/7</p>
                     <button class='border-white bg-white text-black mx-2 absolute bottom-4 px-3 rounded-lg'>Order New</button>
                 </div>
                 <img 
@@ -29,8 +30,8 @@
                     <div className='rounded-xl relative'>
                 <!-- Overlay -->
                 <div class='absolute w-full h-full bg-black/50 rounded-xl text-white'>
-                    <p class='font-bold text-2xl px-2 pt-4'>Sun's Out BOGO's Out  </p>
-                    <p class=' px-2 '>Through 8/26</p>
+                    <p class='font-bold text-2xl px-2 pt-4'>Best Food Ever</p>
+                    <p class=' px-2 '>Open 24/7</p>
                     <button class='border-white bg-white text-black mx-2 absolute bottom-4 px-3 rounded-lg'>Order New</button>
                 </div>
                 <img 
@@ -41,9 +42,9 @@
                     <div className='rounded-xl relative'>
                 <!-- Overlay -->
                 <div class='absolute w-full h-full bg-black/50 rounded-xl text-white'>
-                    <p class='font-bold text-2xl px-2 pt-4'>Sun's Out BOGO's Out  </p>
-                    <p class=' px-2 '>Through 8/26</p>
-                    <button class='border-white bg-white text-black mx-2 absolute bottom-4 px-3 rounded-lg'>Order New</button>
+                    <p class='font-bold text-2xl px-2 pt-4'>Best Food Ever </p>
+                    <p class=' px-2 '>Open 24/7</p>
+                    <button class='border-white bg-white text-black mx-2  absolute bottom-4 px-3 rounded-lg'>Order New</button>
                 </div>
                 <img 
                 class=' max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl'
@@ -53,7 +54,12 @@
   </div>
 </template>
 
+<style>
+
+</style>
+
 <script>
+
   export default {
     
   }

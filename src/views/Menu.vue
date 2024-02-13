@@ -2,13 +2,15 @@
 <template>
   <!-- Order -->
   <div class="flex">
-    <div class="msx-w-[1640px] m-auto px-4 py-12 mt-0">
-      <h1 class=" text-orange-400 font-bold text-4xl text-center">ចង់បានអីចុចលើButton</h1>
+    <div class="msx-w-[1640px] m-auto px-4 pb-10 pt-5 mt-0">
+      <h1 class="font-semi-bold text-4xl mb-4 text-center">
+        Menu with delicious taste and good price
+      </h1>
       <div class="grid grid-cols-2 lg:grid-cols-2 gap-12 pt-4">
         <div
           v-for="(card, index) in cards"
           :key="index"
-          class="border shadow-lg rounded-lg relative hover:scale-105 duration-300 "
+          class="border shadow-lg rounded-lg relative hover:scale-105 duration-300"
         >
           <img
             class="w-full h-[200px] object-cover rounded-lg"
@@ -19,40 +21,42 @@
             <h2 class="font-bold sm:text-xl">{{ card.title }}</h2>
             <h1 class="sm:text-xl text-amber-400 font-semibold">$ {{ card.price }}</h1>
           </div>
-          <div class=" mx-28 my-5">
-
-            <button @click="handleAddToCart(index)" class="  bg-amber-500 py-3 px-7 rounded-lg  text-white hover:opacity-75 ">
-            Add To Cart
-          </button>
+          <div class="mx-28 my-5">
+            <button
+              @click="handleAddToCart(index)"
+              class="bg-amber-500 py-3 px-7 rounded-lg text-white hover:opacity-75"
+            >
+              Add To Cart
+            </button>
           </div>
         </div>
       </div>
 
       <!-- bay char -->
 
-      <!-- <h1 class="text-orange-600 font-bold text-4xl text-center">បាយឆា</h1>
-        <div class="grid grid-cols-2 lg:grid-cols-2 gap-12 pt-4">
-            <div
-            v-for="baychar in baychars"
-            :key="baychar.index"
-            class="border shadow-lg rounded-lg hover:scale-105 duration-300 hover:opacity-75"
-            @click="closecheckbox"
-            >
-            <img
-                class="w-full h-[200px] object-cover rounded-lg"
-                :src="baychar.img"
-                :alt="baychar.img"
-            />
-            <div class="felx justify-between px-2 py-4 text-center">
-                <h2 class="font-bold sm:text-xl">{{ baychar.title }}</h2>
-                <h1 class="sm:text-xl text-red-500 font-semibold">$ {{ baychar.price }}</h1>
+      <h1 class="text-orange-600 font-bold text-4xl text-center"></h1>
+      <div class="grid grid-cols-2 lg:grid-cols-2 gap-12 pt-4">
+        <div
+          v-for="baychar in baychars"
+          :key="baychar.index"
+          class="border shadow-lg rounded-lg hover:scale-105 duration-300 hover:opacity-75"
+          @click="closecheckbox"
+        >
+          <img
+            class="w-full h-[200px] object-cover rounded-lg"
+            :src="baychar.img"
+            :alt="baychar.img"
+          />
+          <div class="felx justify-between px-2 py-4 text-center">
+            <h2 class="font-bold sm:text-xl">{{ baychar.title }}</h2>
+            <h1 class="sm:text-xl text-red-500 font-semibold">$ {{ baychar.price }}</h1>
 
             <button class="bg-orange-500 p-2 rounded-lg text-white">Add To Cart</button>
-            </div>
-            </div>
-        </div>  -->
+          </div>
+        </div>
+      </div>
       <!-- Bree -->
-      <!-- <h1 class="text-orange-600 font-bold text-4xl text-center">ស្រាបៀរ</h1>
+      <h1 class="text-orange-600 font-bold text-4xl text-center"></h1>
       <div class="grid grid-cols-2 lg:grid-cols-2 gap-12 pt-4">
         <div
           v-for="beer in beers"
@@ -70,31 +74,41 @@
             <h1 class="sm:text-xl text-red-500 font-semibold">$ {{ beer.price }}</h1>
           </div>
         </div>
-      </div>  -->
+      </div>
 
       <!-- selected items -->
       <!-- Overlay -->
     </div>
-    
+
     <!-- right Card -->
-    <div class="w-[320px] h-full bg-white border-solid border-2 border-grey-200 ">
+    <div class="w-[320px] h-full bg-white border-solid border-2 border-grey-200">
       <div class="flex space-x-44 m-3">
         <p class="text-xl font-medium text-gray-500 pl-3">Card</p>
-        <p class="text-sm font-semibold text-gray-500 pt-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        <p class="text-sm font-semibold text-gray-500 pt-2 flex gap-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            />
           </svg>
-          
- 
-          <button class="text-lg text-indigo-600">
+          <button
+            class="text-[9px] text-white font-bold absolute text-center ml-4 px-2 py-2 rounded-full w-[5px] h-[5px] bg-red-400 flex justify-center items-center"
+          >
             {{ cart.length }}
           </button>
         </p>
       </div>
 
-
       <!--  -->
-      <div  v-if="cart.length > 0" class="w-[310px] bg-white h-[500px] m-1">
+      <div v-if="cart.length > 0" class="w-[310px] bg-white h-[500px] m-1">
         <div class="overflow-auto max-h-[390px] scrollbar-hider scroll-hidden">
           <!-- card -->
           <div
@@ -111,24 +125,21 @@
                 />
               </div>
               <div>
-                <h1 class="text-black text-xl font-semibold">{{ cartitem.title }}</h1>
-                <h1
-                  class=" text-xl w-14 bg-orange-300 rounded-md text-center text-black"
-                >
+                <h1 class="text-black text-xl font-semibold">
+                  {{ cartitem.title }}
+                </h1>
+                <h1 class="text-xl w-14 bg-orange-300 rounded-md text-center text-black">
                   ${{ cartitem.price }}
                 </h1>
               </div>
               <button
                 @click="handleCancelCart(index)"
-                class="absolute bg-red-500 text-white w-5 h-5 tex rounded-md top-0 right-0"
+                class="absolute bg-red-500 text-white w-6 h-6 rounded-md ml-[245px] px-2 py-2 flex justify-center items-center"
               >
                 x
               </button>
             </div>
-                     <p class="font-medium">
-                       
-                     </p>
-
+            <p class="font-medium"></p>
           </div>
         </div>
         <!--  -->
@@ -136,28 +147,38 @@
           <!-- <div class="flex space-x-[175px]">
             <p class="font-medium">$ {{ totalPrice }}</p>
           </div> -->
-          
-          <div class="flex space-x-[177px] pt-[30px] border-solid border-t-2 border-gray-300">
+
+          <div
+            class="flex space-x-[177px] pt-[30px] border-solid border-t-2 border-gray-300"
+          >
             <p class="text-gray-400">Total</p>
             <p class="font-medium text-orange-700">$ {{ totalPrice }}</p>
           </div>
           <div class="mt-3">
-            <div class="px-17 py-2 text-center bg-hoverOrange hover:bg-red-300 font-medium font-xs rounded-full">
-              <!-- <span>Place on order</span> -->
+            <div
+              class="px-17 py-2 text-center hover:bg-red-300 font-medium font-xs rounded-full"
+            >
+              <span>Place on order</span>
             </div>
           </div>
         </div>
       </div>
-      
-      <div v-else  class="text-center">
-        cart is empy
-      </div>
+
+      <div v-else class="text-center">cart is empty</div>
     </div>
   </div>
 </template>
 
+<style>
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #4a5568;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+</style>
 <script>
-import { ref ,computed } from "vue";
+import { ref, computed } from "vue";
 export default {
   //   data() {
   //     return {
@@ -256,8 +277,10 @@ export default {
     const handleCancelCart = (index) => {
       cart.value.splice(index, 1);
     };
-   const totalPrice = computed(() => {
-      return cart.value.reduce((total, item) => total + parseFloat(item.price), 0).toFixed(2);
+    const totalPrice = computed(() => {
+      return cart.value
+        .reduce((total, item) => total + parseFloat(item.price), 0)
+        .toFixed(2);
     });
     // const baychars = ref([
     //   {
@@ -330,7 +353,7 @@ export default {
       handleAddToCart,
       cart,
       handleCancelCart,
-      totalPrice
+      totalPrice,
     };
   },
 };

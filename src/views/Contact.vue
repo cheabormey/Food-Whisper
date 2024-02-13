@@ -1,44 +1,51 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div class="max-w-[1640px]">
-        <div class="max-w-[1640px] mx-auto p-4 h-screen bg-slate-500 items-center justify-center">
-            <h1 class=" text-center text-3xl"> Contact us</h1>
-            <br><br>
-            <div class=" flex justify-around">
-                <!-- call -->
-                <div class="w-[350px] h-[40vh] bg-gray-200 items-center justify-center rounded-3xl py-10 text-center">
-                    <img class="w-[150px]  m-auto" src="https://ouch-cdn2.icons8.com/jAuQNenNdWhET8VFL8RHc62KuyQStTtg6WR8HSlS6ks/rs:fit:368:299/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMS9j/OGY3OGZmMi0xYmNi/LTQ3YTUtODJlMy1h/NGUxOTU3NmVkNjAu/cG5n.png" alt="">
-                    <br>
-                    <h1 class="text-xl">Spwak to our <br> Customer agent? <br> call  088 605 64 64</h1>
-
-                </div >
-                <!-- gmail -->
-                <div class="w-[350px] h-[40vh] bg-gray-300 items-center justify-center rounded-3xl text-center ">
-                    <img class="w-[150px] m-auto" src="https://img.icons8.com/?size=80&id=6QtoKjRma1Cq&format=png" alt="">
-                    <br>
-                    <h1 class="text-xl">Mail Your enquiries  <br> to us via <br> handyshop@gail.com</h1>
-                </div>
-                <!-- map -->
-                <div class="w-[350px] h-[40vh] bg-gray-200 items-center justify-center rounded-3xl text-center ">
-                    <img class="w-[150px] m-auto" src="https://ouch-cdn2.icons8.com/ZisApEQc_vau88t5jW8urk9eobs1QsCt3kKpuWPpuDc/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNzU3/Lzc4OTFmNGU3LTM1/ZDMtNDI0ZC1hYTg3/LWY0ZjkwYWU4ZDE3/Yy5zdmc.png" alt="">
-                    <br>
-                    <h1 class="text-xl">Banex plaza  <br> Wuse 2 <br> Abuja, Nigeria</h1>
-                </div>
-            </div>
-
-
+  <div class="container mx-auto p-6">
+    <h1 class="text-4xl font-bold mb-8">Contact Us</h1>
+    <p class="text-gray-600 mb-8">
+      We welcome your feedback and questions. Please use the form below to get in touch with us, and we'll get back to you as soon as possible.
+    </p>
+    <form class="w-full max-w-lg">
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+            First Name
+          </label>
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="first-name" type="text">
         </div>
-
-        
-    </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="last-name">
+            Last Name
+          </label>
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="last-name" type="text">
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+            Email
+          </label>
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="email" type="email">
+          <p class="text-gray-600 text-xs italic">Please enter a valid email address.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
+            Message
+          </label>
+          <textarea class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-48 resize-none" id="message"></textarea>
+          <p class="text-gray-600 text-xs italic">Please enter your message.</p>
+        </div>
+      </div>
+      <div class="md:flex md:items-center">
+        <div class="md:w-1/3">
+          <button class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+            Send
+          </button>
+        </div>
+        <div class="md:w-2/3"></div>
+      </div>
+    </form>
+</div>
 </template>
-
-<script>
-    export default {
-        
-    }
-</script>
-
-<style lang="stylus" scoped>
-
-</style>
